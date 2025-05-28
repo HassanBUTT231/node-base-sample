@@ -1,10 +1,11 @@
 
 #!/bin/bash
 set -e
-REGION=$(aws ssm get-parameter --name "/app/ecr-creds/region" --query "Parameter.Value" --output text)
-ACCOUNT_ID=$(aws ssm get-parameter --name "/app/docker-creds/account-id" --query "Parameter.Value" --output text)
-REPO_NAME=$(aws ssm get-parameter --name "/app/ecr-creds/IMAGE_REPO_NAME" --query "Parameter.Value" --output text)
-IMAGE_TAG=$(aws ssm get-parameter --name "/app/docker-creds/image-tag" --query "Parameter.Value" --output text)
+# Set your values
+REGION="us-east-1"
+ACCOUNT_ID="099199746132"
+REPO_NAME="my-app-repo"
+IMAGE_TAG="latest"
 
 echo "Logging into Amazon ECR..."
 aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin "$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com"
