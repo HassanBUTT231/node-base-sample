@@ -1,15 +1,18 @@
 version: 0.2
 
+#env:
+ # parameter-store:
+  #  IMAGE_REPO_NAME: /app/ecr-creds/IMAGE_REPO_NAME
+   # IMAGE_TAG: /app/docker-creds/image-tag
+   # AWS_ACCOUNT_ID: /app/docker-creds/account-id
+   # AWS_REGION: /app/ecr-creds/region
+   # DOCKER_REGISTRY_URL: /app/docker-creds/docker-registry
+   # DOCKER_USERNAME: /app/docker-creds/docker-username
+   # DOCKER_PASS: /app/docker-creds/docker-pass
 env:
-  parameter-store:
-    IMAGE_REPO_NAME: /app/ecr-creds/IMAGE_REPO_NAME
-    IMAGE_TAG: /app/docker-creds/image-tag
-    AWS_ACCOUNT_ID: /app/docker-creds/account-id
-    AWS_REGION: /app/ecr-creds/region
-    DOCKER_REGISTRY_URL: /app/docker-creds/docker-registry
-    DOCKER_USERNAME: /app/docker-creds/docker-username
-    DOCKER_PASS: /app/docker-creds/docker-pass
-
+  variables:
+    IMAGE_REPO_NAME: "sample-2025"
+    IMAGE_TAG: "latest"
 phases:
   install:
     runtime-versions:
