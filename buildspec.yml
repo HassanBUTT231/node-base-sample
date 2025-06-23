@@ -23,10 +23,8 @@ phases:
       - echo "Installing dependencies"
       - npm install
       - echo "Running tests"
-     # - echo "login Docker"
-      #- echo "$DOCKER_PASS" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - echo "Logging in to Amazon ECR..."
-      - aws ecr get-login-password --region "$AWS_REGION" | docker login --username AWS --password-stdin "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 099199746132.dkr.ecr.us-east-1.amazonaws.com
 
   build:
     commands:
