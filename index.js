@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000;
 
 
 app.get('/', (req, res) => {
-  res.send('Hello from Hassan , i am doing at jenkins');
+  res.send('Hello from node app ');
 });
 
 // Start the server and listen on all network interfaces
