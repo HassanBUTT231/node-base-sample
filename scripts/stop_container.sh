@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Stopping existing container..."
 
-CONTAINER_ID=$(docker ps -q --filter ancestor=099199746132.dkr.ecr.us-east-1.amazonaws.com/my-app-repo:latest)
+CONTAINER_ID=$(docker ps -q --filter ancestor=099199746132.dkr.ecr.us-east-1.amazonaws.com/lumino-node-app:latest)
 
 if [ ! -z "$CONTAINER_ID" ]; then
   docker stop $CONTAINER_ID
