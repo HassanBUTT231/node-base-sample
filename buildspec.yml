@@ -11,7 +11,7 @@ version: 0.2
    # DOCKER_PASS: /app/docker-creds/docker-pass
 env:
   variables:
-    IMAGE_REPO_NAME: "sample-2025"
+    IMAGE_REPO_NAME: "lumino-node-app"
     IMAGE_TAG: "latest"
 phases:
   install:
