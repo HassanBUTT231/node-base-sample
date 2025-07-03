@@ -4,7 +4,7 @@ set -e
 # Set your values
 REGION="us-east-1"
 ACCOUNT_ID="099199746132"
-REPO_NAME="my-app-repo"
+REPO_NAME="lumino-node-app"
 IMAGE_TAG="latest"
 
 echo "Logging into Amazon ECR..."
