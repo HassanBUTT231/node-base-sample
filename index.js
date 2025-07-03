@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000;
 
 
 app.get('/node', (req, res) => {
-  res.send('Hello from node app ');
+  res.send('Hello from node app update from pipline ');
 });
 
 // Start the server and listen on all network interfaces
